@@ -1,0 +1,22 @@
+// 重写 antd 部分样式
+a {
+  color: @color-primary;
+  &:hover {
+    color: @color-primary-l;
+  }
+}
+
+[type="search"]:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+// 背景色
+body {
+  background: @color-bcg;
+}
+
+[type="text"]:focus,
+[type="number"]:focus {
+  box-shadow: none;
+}

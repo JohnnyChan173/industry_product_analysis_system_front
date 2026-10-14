@@ -1,0 +1,112 @@
+// 来自 mixin
+.center {
+  .center();
+}
+
+.ellipsis {
+  .ellipsis();
+}
+
+.fullscreen {
+  .fullscreen();
+}
+
+.hover-opacity {
+  .hover-opacity();
+}
+
+.hover-underline {
+  .hover-underline();
+}
+
+.simple-shadow {
+  .simple-shadow();
+}
+
+/* ● 样式 */
+.prefix-circle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 12px;
+  border-radius: @border-radius;
+
+  &::before {
+    content: "";
+    margin-right: 3px;
+    display: inline-block;
+    border-radius: 99999px;
+    width: 6px;
+    height: 6px;
+    border: 1px solid transparent;
+  }
+
+  each(@colorMap,.(@v,@k,@i) {
+    &.@{k} {
+      color: @v;
+      &::before {
+        background-color: @v;
+      }
+      &.border {
+        border-color: @v;
+      }
+    }
+  });
+}
+
+/* 边框化样式 */
+.borderify {
+  border: 1px solid #aaa;
+  // display: inline-block;
+  &.primary {
+    color: @color-primary;
+    border-color: @color-primary;
+  }
+  &.secondary {
+    color: @color-secondary;
+    border-color: @color-secondary;
+  }
+  &.success {
+    color: @color-success;
+    border-color: @color-success;
+  }
+  &.warn {
+    color: @color-warn;
+    border-color: @color-warn;
+  }
+  &.danger {
+    color: @color-danger;
+    border-color: @color-danger;
+  }
+}
+
+.shadow-danger {
+  box-shadow: 0 0 3px 1px #f00 !important;
+}
+
+/* 文字按钮 */
+.text-btn {
+  color: @color-primary;
+  white-space: nowrap;
+  .hover-opacity();
+}
+
+.uploadXlsx {
+  position: relative;
+  margin-right: 22px;
+  &-btn {
+  }
+
+  &-arrow {
+    position: absolute;
+    right: -21px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid #ccc;
+    // border-left: none;
+    height: 100%;
+    padding: 0 5px;
+    .center();
+    .hover-opacity();
+  }
+}

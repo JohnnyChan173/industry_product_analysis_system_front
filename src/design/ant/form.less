@@ -1,0 +1,210 @@
+@resetAntdCSS: resetAntdCSS;
+
+/* 项目样式重置-表单 form */
+.@{namespace}-@{resetAntdCSS}-form-normal {
+  @width: 100%;
+  @normal-height: 32px !important;
+  @height: 38px !important;
+  @fontSize: 14px !important;
+  @border-radius: 5px !important;
+
+  /* 按钮 */
+  .ant-btn {
+    height: @height;
+    border-radius: @border-radius;
+  }
+
+  /* 输入框 */
+  .ant-input {
+    width: @width;
+    height: @height;
+    font-size: @fontSize;
+    border-radius: @border-radius;
+  }
+
+  /* 文本框 */
+  textarea.ant-input {
+    height: auto !important;
+  }
+
+  /* 带前后缀的输入框 */
+  .ant-input-affix-wrapper {
+    width: @width;
+    height: @height;
+
+    .ant-input {
+      height: auto !important;
+    }
+  }
+
+  /* InputNumber */
+  .ant-input-number-group-wrapper,
+  .ant-input-number-input {
+    width: @width;
+    height: @height;
+  }
+
+  /* InputSearch */
+  .ant-input-search-button {
+    height: @height;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: @border-radius;
+    border-bottom-right-radius: @border-radius;
+  }
+
+  /* Checkbox */
+  .ant-radio-group {
+    height: @height;
+    display: flex;
+    align-items: center;
+  }
+
+  /* DatePicker */
+  .ant-picker {
+    width: @width;
+    height: @height;
+  }
+
+  /* 带前后缀的输入框 */
+  .ant-input-group {
+    width: @width;
+    height: @height;
+
+    .ant-input {
+      width: 100% !important;
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+    }
+
+    .ant-input-group-addon {
+      border-top-right-radius: @border-radius;
+      border-bottom-right-radius: @border-radius;
+    }
+  }
+
+  .ant-form-item-label > label {
+    height: @height;
+    line-height: @height;
+    font-size: @fontSize;
+  }
+
+  /* 下拉菜单样式修正 */
+  .ant-select,
+  .ant-select-selector,
+  .ant-select-selection-placeholder {
+    width: @width;
+    min-height: @height;
+    line-height: @height;
+    font-size: @fontSize;
+    border-radius: @border-radius;
+  }
+
+  .ant-select-single .ant-select-selector .ant-select-selection-item,
+  .ant-select-single .ant-select-selector .ant-select-selection-placeholder {
+    line-height: @height;
+  }
+
+  /* 输入框行距修正 */
+  .ant-form-item-control-input {
+    min-height: @height;
+  }
+
+  /* 下拉菜单样式恢复 */
+  .normal {
+    &.ant-select,
+    .ant-select-selector,
+    .ant-select-selection-item,
+    .ant-select-selection-placeholder {
+      height: @normal-height;
+      line-height: @normal-height;
+    }
+  }
+}
+
+/* 项目样式重置-表单 form 段落化 */
+.@{namespace}-@{resetAntdCSS}-form-para {
+  .ant-form-item {
+    margin-bottom: 0;
+    // font-size: @font-size;
+
+    &-control-input-content {
+      color: #999;
+    }
+  }
+}
+
+/* Modal 全屏样式修复 */
+.full-modal {
+  .ant-modal {
+    max-width: 100%;
+    top: 0;
+    padding-bottom: 0;
+    margin: 0 auto;
+    width: 100% !important;
+  }
+  .ant-modal {
+    &-content {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    &-body {
+      // margin-top: 55px;
+      height: calc(100vh - 55px);
+      overflow: hidden;
+      overflow-y: auto;
+    }
+  }
+}
+
+/* 表单控件无高度 */
+.ant-form {
+  .no-height {
+    .ant-form-item-control-input {
+      min-height: 0 !important;
+    }
+  }
+}
+
+/* 展示型表单 */
+.ant-form {
+  &.detail {
+    .ant-row {
+      margin-bottom: 14px;
+    }
+  }
+  &.detail0 {
+    .ant-row {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+/* 表单浅色 */
+.detail-gray.ant-form {
+  .ant-row {
+  }
+  .ant-form-item-label > label,
+  .ant-form-item-control-input-content {
+    color: #999;
+  }
+}
+
+/** formitem 左label 高亮 */
+.form-item-secondary {
+  > .ant-form-item-label {
+    > label {
+      color: @color-secondary;
+    }
+  }
+}
+
+/** formitem 左label 高亮 */
+.form-item-success {
+  > .ant-form-item-label {
+    > label {
+      color: @color-success;
+    }
+  }
+}

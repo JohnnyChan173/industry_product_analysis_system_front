@@ -1,0 +1,97 @@
+/*
+   发现antd 使用的是less
+   less的话可以定制主题 https://www.antdv.com/docs/vue/customize-theme-cn
+   通过 vite.config.ts 进行过程配置 即可生效
+
+  css: {
+        preprocessorOptions: {
+          less: {
+            javascriptEnabled: true,
+            modifyVars: {
+              // antd 变量重写
+              "@primary-color": "#E11717",
+            },
+          },
+        },
+      },
+*/
+
+/* 第二主色按钮（蓝色） */
+.secondary {
+  &.ant-btn-primary {
+    color: #fff;
+    border-color: @color-secondary;
+    background: @color-secondary;
+    .hover-opacity();
+  }
+}
+
+/* 第二主色按钮 幽灵（蓝色） */
+.secondary.ant-btn-background-ghost {
+  &.ant-btn-primary {
+    color: @color-secondary;
+    border-color: @color-secondary;
+    background: white;
+    .hover-opacity();
+  }
+}
+
+/* 警告色按钮 */
+.warn {
+  &.ant-btn-primary {
+    color: #fff;
+    border-color: @color-warn;
+    background: @color-warn;
+    .hover-opacity();
+  }
+}
+
+/* 警告色按钮 幽灵 */
+.warn.ant-btn-background-ghost {
+  &.ant-btn-primary {
+    color: @color-warn;
+    border-color: @color-warn;
+    background: white;
+    .hover-opacity();
+  }
+}
+
+/* 绿色按钮 */
+.success {
+  &.ant-btn-primary {
+    color: #fff;
+    border-color: @color-success;
+    background: @color-success;
+    .hover-opacity();
+  }
+}
+
+/* 绿色按钮 幽灵 */
+.success.ant-btn-background-ghost {
+  &.ant-btn-primary {
+    color: @color-success;
+    border-color: @color-success;
+    background: white;
+    .hover-opacity();
+  }
+}
+
+/* 绿色按钮 */
+.danger {
+  &.ant-btn-primary {
+    color: #fff;
+    border-color: @color-danger-l;
+    background: @color-danger-l;
+    .hover-opacity();
+  }
+}
+
+/* 绿色按钮 幽灵 */
+.danger.ant-btn-background-ghost {
+  &.ant-btn-primary {
+    color: @color-danger-l;
+    border-color: @color-danger-l;
+    background: white;
+    .hover-opacity();
+  }
+}

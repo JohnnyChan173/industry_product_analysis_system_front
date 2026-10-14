@@ -1,0 +1,55 @@
+@import "../var/index.less";
+@import "./btn.less";
+@import "./form.less";
+@import "./table.less";
+
+.ant-message-notice {
+  .ant-message-info .anticon,
+  .ant-message-loading .anticon {
+    color: #aaa;
+  }
+}
+
+// 解决 Form.Item 内使用 Upload 出现高低
+.ant-upload-list-item {
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+// 优化 Image 组件
+.ant-image-img {
+  height: 100%;
+  object-fit: cover;
+}
+
+// 优化 Steps 图标不居中
+.ant-steps-item-icon {
+  .center();
+  display: inline-flex;
+}
+
+// 放大标签
+.large.ant-tag {
+  font-size: 13px;
+  padding: 3px 8px;
+  // pointer-events: none;
+}
+
+// 图标不居中
+.anticon {
+  display: inline-flex!important;
+}
+
+// 图标按钮不居中
+.ant-btn > span {
+  display: inherit;
+}
+
+// tag 尺寸
+.ant-tag {
+  &.large {
+    padding: 3px 6px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,43 @@
+ markLine:
+            props.markLineValue && props.markLineBaseValue
+              ? {
+                  symbol: "none",
+                  label: {
+                    formatter(e) {
+                      const { value, name } = e;
+                      if (name === "中心限") {
+                        return `中心限: ${value}`;
+                      } else if (name === "平均值") {
+                        return `平均值: ${value}`;
+                      } else {
+                        return `${value}`;
+                      }
+                    },
+                    color: themeColor["primary-d"],
+                  },
+                  data: [
+                    {
+                      name: "中心限",
+                      lineStyle: {
+                        type: "dashed",
+                        color: "#096dd9",
+                      },
+                      label: {
+                        color: "#096dd9",
+                      },
+                      yAxis: props.markLineBaseValue,
+                    },
+                    {
+                      name: "平均值",
+                      lineStyle: {
+                        type: "dashed",
+                        color: "#60b060",
+                      },
+                      label: {
+                        color: "#60b060",
+                      },
+                      yAxis: props.markLineValue,
+                    },
+                  ],
+                }
+              : undefined,

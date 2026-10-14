@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- 直接本机引入xlsx-js-style -->
+    <script src="/xlsx-style.min.js"></script>
+
+    <title><%= title %></title>
+
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 50% 42%, rgba(24, 144, 255, 0.12), transparent 34%),
+          linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
+      }
+
+      #app {
+        width: 100%;
+        height: 100%;
+      }
+
+      .app-loading {
+        position: fixed;
+        inset: 0;
+        z-index: 999999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family:
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          "Microsoft YaHei",
+          Arial,
+          sans-serif;
+      }
+
+      .app-loading__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(-18px);
+      }
+
+      .app-loading__spinner {
+        position: relative;
+        width: 52px;
+        height: 52px;
+        margin-bottom: 22px;
+      }
+
+      .app-loading__spinner::before,
+      .app-loading__spinner::after {
+        position: absolute;
+        inset: 0;
+        content: "";
+        border-radius: 50%;
+        border: 3px solid transparent;
+      }
+
+      .app-loading__spinner::before {
+        border-top-color: #1677ff;
+        border-right-color: #1677ff;
+        animation: loading-rotate 0.9s linear infinite;
+      }
+
+      .app-loading__spinner::after {
+        inset: 7px;
+        border-bottom-color: #69b1ff;
+        border-left-color: #69b1ff;
+        animation: loading-rotate-reverse 1.2s linear infinite;
+      }
+
+      .app-loading__title {
+        color: #1f2937;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+
+      .app-loading__dots {
+        display: inline-block;
+        width: 24px;
+        text-align: left;
+      }
+
+      .app-loading__dots::after {
+        content: "";
+        animation: loading-dots 1.4s steps(4, end) infinite;
+      }
+
+      .app-loading__sub {
+        margin-top: 10px;
+        color: #8c99a8;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+      }
+
+      @keyframes loading-rotate {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes loading-rotate-reverse {
+        to {
+          transform: rotate(-360deg);
+        }
+      }
+
+      @keyframes loading-dots {
+        0% { content: ""; }
+        25% { content: "."; }
+        50% { content: ".."; }
+        75%, 100% { content: "..."; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="app-loading">
+        <div class="app-loading__content">
+          <div class="app-loading__spinner"></div>
+
+          <div class="app-loading__title">
+            正在加载可信数改普及版<span class="app-loading__dots"></span>
+          </div>
+
+          <div class="app-loading__sub">
+            系统正在初始化，请稍候
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- built files will be auto injected -->
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

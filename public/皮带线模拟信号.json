@@ -1,0 +1,151 @@
+{
+  "code": 200,
+  "data": [
+    {
+      "timestamp": 1726726062645,
+      "lineId": 1,
+      "stationId": 1,
+      "staffId": 0,
+      "addon": null,
+      "wristband": null,
+      "deviceGround": null,
+      "generalInput": "1",
+      "scale": 0,
+      "scaleProductCount": "0"
+    },
+    
+    {
+      "timestamp": 1725609691867,
+      "lineId": 1,
+      "stationId": 1,
+      "staffId": 0,
+      "addon": null,
+      "wristband": null,
+      "deviceGround": null,
+      "generalInput": "1",
+      "scale": 0,
+      "scaleProductCount": "0"
+    },
+    {
+      "timestamp": 1725609750860,
+      "lineId": 1,
+      "stationId": 1,
+      "staffId": 0,
+      "addon": null,
+      "wristband": null,
+      "deviceGround": null,
+      "generalInput": "1",
+      "scale": 510,
+      "scaleProductCount": "1"
+    },
+    {
+      "timestamp": 1725609810567,
+      "lineId": 1,
+      "stationId": 2,
+      "staffId": 0,
+      "addon": null,
+      "wristband": null,
+      "deviceGround": null,
+      "generalInput": "1",
+      "scale": 0,
+      "scaleProductCount": "0"
+    },
+    {
+      "timestamp": 1725609885780,
+      "lineId": 1,
+      "stationId": 2,
+      "staffId": 0,
+      "addon": null,
+      "wristband": null,
+      "deviceGround": null,
+      "generalInput": "1",
+      "scale": 0,
+      "scaleProductCount": "0"
+    },
+    {
+      "timestamp": 1725609975044,
+      "lineId": 1,
+      "stationId": 2,
+      "staffId": 0,
+      "addon": null,
+      "wristband": null,
+      "deviceGround": null,
+      "generalInput": "1",
+      "scale": 510,
+      "scaleProductCount": "1"
+    },
+    {
+      "timestamp": 1725610050134,
+      "lineId": 1,
+      "stationId": 2,
+      "staffId": 0,
+      "addon": null,
+      "wristband": null,
+      "deviceGround": null,
+      "generalInput": "1",
+      "scale": 510,
+      "scaleProductCount": "1"
+    },
+    {
+      "timestamp": 1725610128372,
+      "lineId": 1,
+      "stationId": 1,
+      "staffId": 0,
+      "addon": null,
+      "wristband": null,
+      "deviceGround": null,
+      "generalInput": "1",
+      "scale": 510,
+      "scaleProductCount": "1"
+    },
+    {
+      "timestamp": 1725610235910,
+      "lineId": 1,
+      "stationId": 1,
+      "staffId": 0,
+      "addon": null,
+      "wristband": null,
+      "deviceGround": null,
+      "generalInput": "1",
+      "scale": 510,
+      "scaleProductCount": "1"
+    },
+    {
+      "timestamp": 1725610374318,
+      "lineId": 1,
+      "stationId": 1,
+      "staffId": 0,
+      "addon": null,
+      "wristband": null,
+      "deviceGround": null,
+      "generalInput": "1",
+      "scale": 510,
+      "scaleProductCount": "1"
+    },
+    {
+      "timestamp": 1725610473735,
+      "lineId": 1,
+      "stationId": 2,
+      "staffId": 0,
+      "addon": null,
+      "wristband": null,
+      "deviceGround": null,
+      "generalInput": "1",
+      "scale": 1020,
+      "scaleProductCount": "2"
+    },
+    {
+      "timestamp": 1725610534660,
+      "lineId": 1,
+      "stationId": 1,
+      "staffId": 0,
+      "addon": null,
+      "wristband": null,
+      "deviceGround": null,
+      "generalInput": "1",
+      "scale": 1530,
+      "scaleProductCount": "3"
+    },
+  ],
+  "message": ""
+}

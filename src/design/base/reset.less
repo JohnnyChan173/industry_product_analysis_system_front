@@ -1,0 +1,49 @@
+/* 基础样式复写 */
+
+body {
+  height: 100%;
+  overflow: hidden;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  // overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: initial;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+div:focus {
+  outline: none;
+}
+
+img {
+  display: initial;
+}

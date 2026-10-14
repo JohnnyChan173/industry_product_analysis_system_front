@@ -1,0 +1,59 @@
+@shadow-color: rgba(0, 0, 0, 0.15);
+
+// 简单阴影
+.simple-shadow(@x: 0px, @y: 0px, @size: 1px) {
+  box-shadow: @x @y @size*3 @size*1 @shadow-color;
+}
+
+.bem(@n; @content) {
+  @{namespace}-@{n} {
+    @content();
+  }
+}
+
+/* mixix acss 混用样式 需重新引入 acss.less 中 */
+
+// 弹性盒子-居中
+.center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fullscreen() {
+  position: fixed;
+  max-width: none;
+  z-index: 10;
+  padding: 20px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+}
+
+.hover-opacity() {
+  transition: all @transition-time-f;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.hover-underline() {
+  transition: all @transition-time-f;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
